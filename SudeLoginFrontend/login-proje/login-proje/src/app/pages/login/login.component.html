@@ -1,0 +1,37 @@
+<div class="login-page">
+  <div class="login-box">
+    <img src="assets\logo\273268077_356676729617871_9098716425576425706_n.jpg"
+        alt="Şirket Logosu" class="company-logo" [class.animate-logo]="animateLogo" />
+    <h2>Giriş Yap</h2>
+
+    <div *ngIf="errorMessage" class="error-msg">
+      {{ errorMessage }}
+    </div>
+
+    <form (ngSubmit)="login()" class="login-form">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input
+          type="text"
+          [(ngModel)]="KullaniciName"
+          name="KullaniciName"
+          placeholder="Kullanıcı Adı"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input
+          type="password"
+          [(ngModel)]="KullaniciPassword"
+          name="KullaniciPassword"
+          placeholder="Şifre"
+          required
+        />
+      </div>
+
+      <button type="submit">Giriş</button>
+    </form>
+  </div>
+</div>

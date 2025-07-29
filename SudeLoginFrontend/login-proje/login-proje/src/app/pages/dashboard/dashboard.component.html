@@ -1,0 +1,14 @@
+
+<div class="dashboard-container" *ngIf="kullanici">
+  <p>Hoş geldin, {{ kullanici.kullaniciName }}</p>
+  <ul>
+    <li>ID: {{ kullanici.kullaniciId }}</li>
+    <li>Email: {{ kullanici.kullaniciEmail }}</li>
+    <li>Rol: {{ kullanici.kullaniciRol }}</li>
+    <li>Oluşturma Tarihi: {{ kullanici.olusturmaTarihi }}</li>
+    <li>Güncellenme Tarihi: {{ kullanici.guncellenmeTarihi }}</li>
+    <li>Aktif mi: {{ kullanici.aktifMi }}</li>
+  </ul>
+</div>
+
+
